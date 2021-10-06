@@ -5,7 +5,7 @@ PHP Autoloader Classes
 <?php 
 
 // On the very top of your header.php file
-require_once __DIR__ . '/library/PHPLoader/PHPAutoloader.php';
+require __DIR__ . '/library/PHPLoader/PHPAutoloader.php';
 
 ```
 
