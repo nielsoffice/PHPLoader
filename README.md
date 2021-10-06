@@ -68,7 +68,7 @@ $PHPLoader = NEW \PHPAutoloader\Classes\system\DataClass();
 // Instantiate Alias
 USE \PHPAutoloader\Classes\system\DataClass AS PHPLoader();
 // Calling the classe instantiated
-$DataClass    = new DataClass();
+$DataClass    = new PHPLoader();
 
 ```
 
