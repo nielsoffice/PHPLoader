@@ -39,3 +39,35 @@ use \PHPAutoloader\Classes\RequestClass\subfolder;
 
 ```
 
+<h6>PHP Classes </h6>
+
+```PHP
+
+use \PHPAutoloader\Classes\RequestClass;
+use \PHPAutoloader\Classes\system\PHPClass;
+use \PHPAutoloader\Classes\system\DataClass; 
+
+// Parent Folder
+$RequestClass = new RequestClass();
+echo "<br />";
+echo  $RequestClass->getRequestClass();
+
+// Sub folder
+echo "<br />";
+echo PHPClass::PHPAutoloader();
+
+// Sub folder
+$DataClass    = new DataClass();
+echo "<br />"; 
+echo $DataClass->getRequest();
+
+
+// Instantiate Default
+$PHPLoader = NEW \PHPAutoloader\Classes\system\DataClass(); 
+
+// Instantiate Alias
+USE \PHPAutoloader\Classes\system\DataClass AS PHPLoader();
+// Calling the classe instantiated
+$DataClass    = new DataClass();
+
+```
