@@ -76,7 +76,7 @@ $DataClass    = new PHPLoader();
 <h5>
 Github : To allow me to upload my PHP Library PHPAuth-Effortless to repository<br /> 
 php.net : To oppurtunity Develop web application using corePHP - PHPFrameworks<br />
-PHP SPL SP4 PHP Loader | PHPTeam | PHPGroup
+PHP SPL SPR4 PHP Loader | PHPTeam | PHPGroup
 </h5>
 
 __Please kindly read license and agreement under by MIT__
