@@ -37,30 +37,47 @@
  *
  */
 
- require __DIR__ . '/prop.php';
-
-/**
- *
- * Defined Class Loader SPL Begin
- * @since 04.05.21
- * @since v1.0
- * 
- **/ 
-spl_autoload_register(function($class) 
+function PHPAutoLoader($properties)
 {
 
-    // File name space
-    $systemFileRequest = AUTH_DIRECTORY_FILE_REQUEST;
+ $PHPAutoLoader = new class {
 
-    // base directory system file
-    $sourceFileRquest  = BASE_DIR_SYSTEM_FILE;
-	
-    if (strncmp($systemFileRequest, $class, strlen($systemFileRequest)) !== 0) return;
+       public function PHPAutoLoader(string $properties) 
+       {
 
-    // Directory system data files
-    $dataRequest = $sourceFileRquest . str_replace('\\', '/', substr($class, strlen($systemFileRequest))) . _PHP_;
+         /**
+           *
+           * Defined Class Loader SPL Begin
+           * @since 04.05.21
+           * @since v1.0
+           * 
+           **/ 
+           
+           require __DIR__ . $properties;
 
-    // if the file exists, require it
-    (file_exists($dataRequest)) ? require $dataRequest : false;
+           spl_autoload_register(function($class) 
+           {
+           
+               // File name space
+               $systemFileRequest = DIRECTORY_FILE_REQUEST;
+           
+               // base directory system file
+               $sourceFileRquest  = BASE_DIR_SYSTEM_FILE;                
+               if (strncmp($systemFileRequest, $class, strlen($systemFileRequest)) !== 0) return;
+           
+               // Directory system data files
+               $dataRequest = $sourceFileRquest . str_replace('\\', '/', substr($class, strlen($systemFileRequest))) . _PHP_;
+           
+               // if the file exists, require it
+               (file_exists($dataRequest)) ? require $dataRequest : false;
+           
+           });
+   
+       }
+   };
+   
+   $PHPAutoLoader->PHPAutoLoader($properties);
 
-});
+}
+
+PHPAutoLoader('/prop.php');
