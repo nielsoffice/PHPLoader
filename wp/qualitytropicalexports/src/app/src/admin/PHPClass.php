@@ -1,4 +1,4 @@
-<?php namespace PHPAutoloader\QTE\system; ?>
+<?php namespace PHPAutoloader\QTE\admin; ?>
 <?php 
 
 /**

@@ -30,12 +30,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
- require_once plugin_dir_path( __FILE__ ) . 'src/app/PHPAutoloader.php';
-
-	// Parent Folder
-	use \PHPAutoloader\QTE\RequestClass;
-	use \PHPAutoloader\QTE\system\PHPClass;
-	use \PHPAutoloader\QTE\system\DataClass; 
+if( plugin_dir_path( __FILE__ ) . 'src/app/PHPAutoloader.php' ) : require_once plugin_dir_path( __FILE__ ) . 'src/app/PHPAutoloader.php'; endif;
+  
+ // Parent Folder
+ use \PHPAutoloader\QTE\RequestClass;
+ use \PHPAutoloader\QTE\admin\PHPClass;
+ use \PHPAutoloader\QTE\admin\DataClass; 
 
 function niesloffice_sublevel_menu() 
 {
