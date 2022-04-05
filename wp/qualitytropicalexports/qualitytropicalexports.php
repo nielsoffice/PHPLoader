@@ -30,13 +30,27 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if( plugin_dir_path( __FILE__ ) . 'src/app/PHPAutoloader.php' ) : require_once plugin_dir_path( __FILE__ ) . 'src/app/PHPAutoloader.php'; endif;
+ /**
+  * Currently plugin version.
+  * Start at version 1.0.0 and use SemVer - https://semver.org
+  * Rename this for your plugin and update it as you release new versions.
+  */
+ define( 'QUALITYTROPICALEXPORTS_VERSION', '1.0.0' );
+
+
+ 
+/**
+ * The code that help all cusotm classe or applciation run initialisation
+ * This action is documented in app/src/app
+ */
+ require_once plugin_dir_path( __FILE__ ) . 'src/app/PHPAutoloader.php';
   
  // Parent Folder
  use \PHPAutoloader\QTE\RequestClass;
  use \PHPAutoloader\QTE\admin\PHPClass;
  use \PHPAutoloader\QTE\admin\DataClass; 
 
+ 
 function niesloffice_sublevel_menu() 
 {
    
@@ -72,12 +86,6 @@ function nielsoffice_display_page()
 
 }
 
-/**
- * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
- */
-define( 'QUALITYTROPICALEXPORTS_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.

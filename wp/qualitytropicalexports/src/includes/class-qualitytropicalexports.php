@@ -113,7 +113,7 @@ class Qualitytropicalexports {
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'app/src/admin/class-qualitytropicalexports-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'app/actions/admin/class-qualitytropicalexports-admin.php';
 
 		$this->loader = new Qualitytropicalexports_Loader();
 
